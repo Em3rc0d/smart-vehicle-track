@@ -1,4 +1,4 @@
-package spring.smart_vehicle_track.controller;
+package spring.smart_vehicle_track.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
