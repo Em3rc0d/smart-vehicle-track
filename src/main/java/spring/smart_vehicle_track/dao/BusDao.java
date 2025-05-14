@@ -17,4 +17,9 @@ public class BusDao implements IBusDao {
     public Bus crearBus(Bus bus) {
         return busRepository.save(bus);
     }
+
+    @Override
+    public Bus encontrarBusById(Long id){
+        return busRepository.findById(id).orElseThrow();
+    }
 }
