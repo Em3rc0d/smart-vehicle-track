@@ -53,4 +53,39 @@ public class BusService implements IBusService {
         }
     }
 
+    @Override
+    public Bus actualizarBus(BusDto busDto, Long id) {
+        try {
+            Optional<Bus> optionalBus = Optional.ofNullable(busDao.encontrarBusById(id));
+            if (optionalBus.isEmpty()) {
+                throw new IllegalArgumentException("Bus no encontrado con ID: " + id);
+            }
+            if (optionalBus.isPresent()) {
+                Bus bus = optionalBus.get();
+                bus.setPlaca(busDto.getPlaca());
+                bus.setModelo(busDto.getModelo());
+                bus.setCapacidad(busDto.getCapacidad());
+                bus.setEstado(busDto.getEstado());
+
+                return busDao.actualizarBus(bus);
+            } else {
+                throw new IllegalArgumentException("Bus no encontrado con ID: " + id);
+            }
+        } catch (Exception e) {
+            throw new RuntimeException("Error al actualizar el bus", e);
+        }
+    }
+
+    @Override
+    public Bus eliminarBus(Long id) {
+        try {
+            Optional<Bus> optionalBus = Optional.ofNullable(busDao.encontrarBusById(id));
+            if (optionalBus.isEmpty()) {
+                throw new IllegalArgumentException("Bus no encontrado con ID: " + id);
+            }
+            return busDao.eliminarBus(id);
+        } catch (Exception e) {
+            throw new RuntimeException("Error al eliminar el bus", e);
+        }
+    }
 }

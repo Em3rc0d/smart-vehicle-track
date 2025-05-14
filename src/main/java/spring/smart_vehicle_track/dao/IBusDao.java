@@ -9,4 +9,8 @@ public interface IBusDao {
     Bus crearBus(Bus bus);
 
     Bus encontrarBusById(Long id);
+
+    Bus actualizarBus(Bus bus);
+
+    Bus eliminarBus(Long id);
 }

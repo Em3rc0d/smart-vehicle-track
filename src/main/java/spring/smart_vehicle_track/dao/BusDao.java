@@ -22,4 +22,16 @@ public class BusDao implements IBusDao {
     public Bus encontrarBusById(Long id){
         return busRepository.findById(id).orElseThrow();
     }
+
+    @Override
+    public Bus actualizarBus(Bus bus) {
+        return busRepository.save(bus);
+    }
+
+    @Override
+    public Bus eliminarBus(Long id) {
+        Bus bus = encontrarBusById(id);
+        busRepository.delete(bus);
+        return bus;
+    }
 }
