@@ -19,24 +19,8 @@ public class ChoferController {
         return ResponseEntity.ok(choferService.crearChofer(choferDto));
     }
 
-//    // Actualizar un chofer
-//    @PutMapping("/{id}")
-//    public ResponseEntity<Chofer> actualizarChofer(@PathVariable Long id, @RequestBody ChoferDto choferDto) {
-//        Chofer choferActualizado = choferService.actualizarChofer(id, choferDto);
-//        return ResponseEntity.ok(choferActualizado);
-//    }
-//
-//    // Obtener un chofer por su ID
-//    @GetMapping("/{id}")
-//    public ResponseEntity<Chofer> obtenerChofer(@PathVariable Long id) {
-//        Chofer chofer = choferService.obtenerChofer(id);
-//        return ResponseEntity.ok(chofer);
-//    }
-//
-//    // Eliminar un chofer por su ID
-//    @DeleteMapping("/{id}")
-//    public ResponseEntity<Void> eliminarChofer(@PathVariable Long id) {
-//        choferService.eliminarChofer(id);
-//        return ResponseEntity.noContent().build();
-//    }
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Chofer> eliminarChofer(@PathVariable Long id) {
+        return ResponseEntity.ok(choferService.eliminarChofer(id));
+    }
 }

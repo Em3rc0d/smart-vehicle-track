@@ -10,4 +10,7 @@ public interface IChoferDao {
     Chofer crearChofer(Chofer chofer);
 
     Chofer encontrarChoferById(Long id);
+    Chofer eliminarChofer(Long id);
+
+
 }

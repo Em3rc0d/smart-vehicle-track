@@ -23,4 +23,15 @@ public class ChoferDao implements IChoferDao {
     public Chofer encontrarChoferById(Long id) {
         return choferRepository.findById(id).orElseThrow();
     }
+
+    @Override
+    public Chofer eliminarChofer(Long id){
+        Optional<Chofer> chofer = choferRepository.findById(id);
+        if (chofer.isPresent()) {
+            choferRepository.delete(chofer.get());
+            return chofer.get();
+        } else {
+            throw new RuntimeException("Chofer not found");
+        }
+    }
 }

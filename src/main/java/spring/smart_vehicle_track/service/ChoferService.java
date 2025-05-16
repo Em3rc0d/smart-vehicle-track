@@ -26,29 +26,8 @@ public class ChoferService implements IChoferService {
         return choferDao.crearChofer(chofer);
     }
 
-//    @Override
-//    public Chofer actualizarChofer(Long id, ChoferDto choferDto) {
-//        // Buscamos el chofer por su ID
-//        Chofer chofer = choferRepository.findById(id).orElseThrow(() -> new RuntimeException("Chofer no encontrado"));
-//
-//        // Actualizamos los datos del chofer con los datos del DTO
-//        chofer.setNombre(choferDto.getNombre());
-//        chofer.setDni(choferDto.getDni());
-//        chofer.setLicencia(choferDto.getLicencia());
-//        chofer.setTelefono(choferDto.getTelefono());
-//
-//        // Guardamos el chofer actualizado en la base de datos
-//        return choferRepository.save(chofer);
-//    }
-//
-//    @Override
-//    public void eliminarChofer(Long id) {
-//        // Eliminamos el chofer por su ID
-//        choferRepository.deleteById(id);
-//    }
-//
-//    @Override
-//    public Chofer obtenerChofer(Long id) {
-//        return choferRepository.findById(id).orElseThrow(() -> new RuntimeException("Chofer no encontrado"));
-//    }
+    @Override
+    public Chofer eliminarChofer(Long id) {
+        return choferDao.eliminarChofer(id);
+    }
 }
