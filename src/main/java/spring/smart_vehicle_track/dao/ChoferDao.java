@@ -1,5 +1,7 @@
 package spring.smart_vehicle_track.dao;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +23,17 @@ public class ChoferDao implements IChoferDao {
     @Override
     public Chofer encontrarChoferById(Long id) {
         return choferRepository.findById(id).orElseThrow();
+    }
+
+    @Override
+    public Chofer eliminarChofer(Long id){
+        Optional<Chofer> chofer = choferRepository.findById(id);
+        if (chofer.isPresent()) {
+            choferRepository.delete(chofer.get());
+            return chofer.get();
+        } else {
+            throw new RuntimeException("Chofer not found");
+        }
     }
 
 }

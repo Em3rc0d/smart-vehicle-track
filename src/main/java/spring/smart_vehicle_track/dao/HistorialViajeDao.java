@@ -20,4 +20,9 @@ public class HistorialViajeDao implements IHistorialViajeDao {
     public List<HistorialViaje> obtenerHistorialBus(Long busId) {
         return historialViajeRepository.obtenerHistorialBus(busId);
     }
+
+    @Override
+    public HistorialViaje registrarPaso(HistorialViaje historialViaje) {
+        return historialViajeRepository.save(historialViaje);
+    }    
 }

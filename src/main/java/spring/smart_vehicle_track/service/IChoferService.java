@@ -1,10 +1,11 @@
 package spring.smart_vehicle_track.service;
 
+import java.util.Map;
+
 import org.springframework.stereotype.Service;
+
 import spring.smart_vehicle_track.dto.ChoferDto;
 import spring.smart_vehicle_track.model.Chofer;
-
-import java.util.Map;
 
 @Service
 public interface IChoferService {
@@ -20,4 +21,5 @@ public interface IChoferService {
 //
 //    // Método para obtener un chofer por su ID
 //    Chofer obtenerChofer(Long id);
+    Chofer eliminarChofer(Long id);
 }

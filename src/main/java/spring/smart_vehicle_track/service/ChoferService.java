@@ -2,11 +2,11 @@ package spring.smart_vehicle_track.service;
 
 import java.util.Map;
 
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 import spring.smart_vehicle_track.dao.IChoferDao;
 import spring.smart_vehicle_track.dao.generic.IGenericDao;
 import spring.smart_vehicle_track.dto.ChoferDto;
@@ -66,4 +66,7 @@ public class ChoferService implements IChoferService {
 //    public Chofer obtenerChofer(Long id) {
 //        return choferRepository.findById(id).orElseThrow(() -> new RuntimeException("Chofer no encontrado"));
 //    }
+    public Chofer eliminarChofer(Long id) {
+        return choferDao.eliminarChofer(id);
+    }
 }

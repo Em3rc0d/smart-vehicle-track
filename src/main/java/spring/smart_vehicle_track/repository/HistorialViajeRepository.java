@@ -12,4 +12,6 @@ public interface HistorialViajeRepository extends JpaRepository<HistorialViaje, 
     @Query(value="SELECT h FROM HistorialViaje h WHERE h.bus.id = ?1 ORDER BY h.fechaHoraPaso")
     List<HistorialViaje> obtenerHistorialBus(Long busId);
 
+    // Aquí puedes agregar métodos personalizados si es necesario
+    
 }
