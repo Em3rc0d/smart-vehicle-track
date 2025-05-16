@@ -1,6 +1,9 @@
 package spring.smart_vehicle_track.dao;
 
 import lombok.Data;
+
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 import spring.smart_vehicle_track.model.Bus;
 
@@ -13,4 +16,6 @@ public interface IBusDao {
     Bus actualizarBus(Bus bus);
 
     Bus eliminarBus(Long id);
+
+    List<Bus> obtenerBuses();
 }

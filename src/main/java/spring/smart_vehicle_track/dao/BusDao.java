@@ -1,8 +1,12 @@
 package spring.smart_vehicle_track.dao;
 
+import java.util.List;
+
 import lombok.Data;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import spring.smart_vehicle_track.model.Bus;
 import spring.smart_vehicle_track.repository.BusRepository;
 
@@ -33,5 +37,10 @@ public class BusDao implements IBusDao {
         Bus bus = encontrarBusById(id);
         busRepository.delete(bus);
         return bus;
+    }
+
+    @Override
+    public List<Bus> obtenerBuses() {
+        return busRepository.findAll();
     }
 }

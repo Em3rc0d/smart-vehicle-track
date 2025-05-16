@@ -1,5 +1,7 @@
 package spring.smart_vehicle_track.controllers;
 
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,11 +22,11 @@ public class ChoferController {
     }
 
 //    // Actualizar un chofer
-//    @PutMapping("/{id}")
-//    public ResponseEntity<Chofer> actualizarChofer(@PathVariable Long id, @RequestBody ChoferDto choferDto) {
-//        Chofer choferActualizado = choferService.actualizarChofer(id, choferDto);
-//        return ResponseEntity.ok(choferActualizado);
-//    }
+   @PutMapping("/{id}")
+   public ResponseEntity<Chofer> actualizarChofer(@RequestBody Map<String, Object> chofer, @PathVariable Long id) {
+       Chofer choferActualizado = choferService.actualizarChofer(chofer, id );
+       return ResponseEntity.ok(choferActualizado);
+   }
 //
 //    // Obtener un chofer por su ID
 //    @GetMapping("/{id}")

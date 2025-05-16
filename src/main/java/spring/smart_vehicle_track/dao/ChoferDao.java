@@ -1,12 +1,11 @@
 package spring.smart_vehicle_track.dao;
 
-import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import lombok.Data;
 import spring.smart_vehicle_track.model.Chofer;
 import spring.smart_vehicle_track.repository.ChoferRepository;
-
-import java.util.Optional;
 
 @Data
 @Service
@@ -23,4 +22,5 @@ public class ChoferDao implements IChoferDao {
     public Chofer encontrarChoferById(Long id) {
         return choferRepository.findById(id).orElseThrow();
     }
+
 }

@@ -1,19 +1,27 @@
 package spring.smart_vehicle_track.service;
 
-import lombok.Data;
+import java.util.Map;
+
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import lombok.Data;
 import spring.smart_vehicle_track.dao.IChoferDao;
+import spring.smart_vehicle_track.dao.generic.IGenericDao;
 import spring.smart_vehicle_track.dto.ChoferDto;
 import spring.smart_vehicle_track.model.Chofer;
-import spring.smart_vehicle_track.repository.ChoferRepository;
 
+@Slf4j
 @Data
 @Service
 public class ChoferService implements IChoferService {
 
     @Autowired
     private IChoferDao choferDao;
+    
+    @Autowired
+    private IGenericDao genericDao;
 
     @Override
     public Chofer crearChofer(ChoferDto choferDto) {
@@ -23,6 +31,13 @@ public class ChoferService implements IChoferService {
         chofer.setLicencia(choferDto.getLicencia());
         chofer.setTelefono(choferDto.getTelefono());
 
+        return choferDao.crearChofer(chofer);
+    }
+
+    @Override
+    public Chofer actualizarChofer(Map<String, Object> datosChofer, Long id){
+        Chofer chofer = choferDao.encontrarChoferById(id);
+        chofer = genericDao.actualizarCampos(chofer, datosChofer);
         return choferDao.crearChofer(chofer);
     }
 
