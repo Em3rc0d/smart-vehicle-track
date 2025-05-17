@@ -7,6 +7,7 @@ import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import spring.smart_vehicle_track.dao.interfaces.IBusDao;
 import spring.smart_vehicle_track.model.Bus;
 import spring.smart_vehicle_track.repository.BusRepository;
 

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import spring.smart_vehicle_track.dto.UsuarioDto;
 import spring.smart_vehicle_track.model.Usuario;
-import spring.smart_vehicle_track.service.IUsuarioService;
+import spring.smart_vehicle_track.service.interfaces.IUsuarioService;
 
 
 @RestController

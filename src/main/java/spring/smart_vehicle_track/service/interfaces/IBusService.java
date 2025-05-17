@@ -1,4 +1,4 @@
-package spring.smart_vehicle_track.service;
+package spring.smart_vehicle_track.service.interfaces;
 
 import org.springframework.stereotype.Service;
 import spring.smart_vehicle_track.dto.BusDto;

@@ -3,6 +3,7 @@ package spring.smart_vehicle_track.dao;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import spring.smart_vehicle_track.dao.interfaces.IUbicacionBusDao;
 import spring.smart_vehicle_track.model.UbicacionBus;
 import spring.smart_vehicle_track.repository.UbicacionBusRepository;
 
@@ -10,7 +11,7 @@ import java.util.List;
 
 @Data
 @Service
-public class UbicacionBusDao implements IUbicacionBusDao{
+public class UbicacionBusDao implements IUbicacionBusDao {
 
     @Autowired
     private UbicacionBusRepository ubicacionBusRepository;

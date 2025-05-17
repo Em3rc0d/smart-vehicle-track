@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import spring.smart_vehicle_track.dto.HistorialViajeDto;
 import spring.smart_vehicle_track.model.HistorialViaje;
-import spring.smart_vehicle_track.service.IHistorialViajeService;
+import spring.smart_vehicle_track.service.interfaces.IHistorialViajeService;
 
 
 @RestController

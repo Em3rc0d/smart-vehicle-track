@@ -1,4 +1,4 @@
-package spring.smart_vehicle_track.service;
+package spring.smart_vehicle_track.service.interfaces;
 
 import spring.smart_vehicle_track.dto.EstacionDto;
 import spring.smart_vehicle_track.model.Estacion;

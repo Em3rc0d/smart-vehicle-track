@@ -6,8 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import lombok.Data;
-import spring.smart_vehicle_track.dao.IHorarioDao;
+import spring.smart_vehicle_track.dao.interfaces.IHorarioDao;
 import spring.smart_vehicle_track.model.Horario;
+import spring.smart_vehicle_track.service.interfaces.IHorarioService;
 
 @Data
 @Service

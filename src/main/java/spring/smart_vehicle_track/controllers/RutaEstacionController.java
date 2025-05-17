@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import spring.smart_vehicle_track.dto.RutaEstacionDto;
 import spring.smart_vehicle_track.model.RutaEstacion;
-import spring.smart_vehicle_track.service.IRutaEstacionService;
+import spring.smart_vehicle_track.service.interfaces.IRutaEstacionService;
 
 @RestController
 @RequestMapping("/api/ruta-estacion")

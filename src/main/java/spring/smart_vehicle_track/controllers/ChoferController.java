@@ -1,7 +1,5 @@
 package spring.smart_vehicle_track.controllers;
 
-import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,7 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import spring.smart_vehicle_track.dto.ChoferDto;
 import spring.smart_vehicle_track.model.Chofer;
-import spring.smart_vehicle_track.service.IChoferService;
+import spring.smart_vehicle_track.service.interfaces.IChoferService;
+
+import java.util.Map;
 
 
 @RestController
@@ -30,6 +30,11 @@ public class ChoferController {
     @DeleteMapping("/{id}")
     public ResponseEntity<Chofer> eliminarChofer(@PathVariable Long id) {
         return ResponseEntity.ok(choferService.eliminarChofer(id));
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Chofer> actualizarChofer(@PathVariable Long id, @RequestBody Map<String, Object> choferDto) {
+        return ResponseEntity.ok(choferService.actualizarChofer(choferDto, id));
     }
 //    // Actualizar un chofer
 //    @PutMapping("/{id}")

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import spring.smart_vehicle_track.model.Horario;
-import spring.smart_vehicle_track.service.IHorarioService;
+import spring.smart_vehicle_track.service.interfaces.IHorarioService;
 
 @RestController
 @RequestMapping("/api/horario")

@@ -1,6 +1,4 @@
-package spring.smart_vehicle_track.dao;
-
-import lombok.Data;
+package spring.smart_vehicle_track.dao.interfaces;
 
 import java.util.List;
 

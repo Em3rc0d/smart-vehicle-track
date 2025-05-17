@@ -7,10 +7,11 @@ import org.springframework.stereotype.Service;
 
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
-import spring.smart_vehicle_track.dao.IChoferDao;
+import spring.smart_vehicle_track.dao.interfaces.IChoferDao;
 import spring.smart_vehicle_track.dao.generic.IGenericDao;
 import spring.smart_vehicle_track.dto.ChoferDto;
 import spring.smart_vehicle_track.model.Chofer;
+import spring.smart_vehicle_track.service.interfaces.IChoferService;
 
 @Slf4j
 @Data

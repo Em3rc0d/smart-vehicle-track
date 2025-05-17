@@ -1,4 +1,4 @@
-package spring.smart_vehicle_track.dao;
+package spring.smart_vehicle_track.dao.interfaces;
 
 import java.util.List;
 

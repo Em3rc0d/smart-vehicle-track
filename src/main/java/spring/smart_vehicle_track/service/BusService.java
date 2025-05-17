@@ -3,14 +3,15 @@ package spring.smart_vehicle_track.service;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import spring.smart_vehicle_track.dao.IBusDao;
-import spring.smart_vehicle_track.dao.IChoferDao;
-import spring.smart_vehicle_track.dao.IRutaDao;
+import spring.smart_vehicle_track.dao.interfaces.IBusDao;
+import spring.smart_vehicle_track.dao.interfaces.IChoferDao;
+import spring.smart_vehicle_track.dao.interfaces.IRutaDao;
 import spring.smart_vehicle_track.dao.generic.IGenericDao;
 import spring.smart_vehicle_track.dto.BusDto;
 import spring.smart_vehicle_track.model.Bus;
 import spring.smart_vehicle_track.model.Chofer;
 import spring.smart_vehicle_track.model.Ruta;
+import spring.smart_vehicle_track.service.interfaces.IBusService;
 
 import java.util.List;
 import java.util.Map;

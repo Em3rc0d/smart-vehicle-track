@@ -1,11 +1,11 @@
 package spring.smart_vehicle_track.dto;
 
+import java.math.BigDecimal;
+import java.sql.Timestamp;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.math.BigDecimal;
-import java.sql.Timestamp;
 
 @AllArgsConstructor
 @NoArgsConstructor

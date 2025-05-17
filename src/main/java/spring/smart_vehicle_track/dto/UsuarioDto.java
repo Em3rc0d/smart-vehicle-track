@@ -5,7 +5,7 @@ import jakarta.persistence.Enumerated;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import spring.smart_vehicle_track.model.ROL_USER;
+import spring.smart_vehicle_track.model.enums.ROL_USER;
 
 @AllArgsConstructor
 @NoArgsConstructor

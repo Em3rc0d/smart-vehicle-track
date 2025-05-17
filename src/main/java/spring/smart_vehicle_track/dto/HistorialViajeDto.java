@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-
 public class HistorialViajeDto {
     private Long idRuta;
     private Long idBus;

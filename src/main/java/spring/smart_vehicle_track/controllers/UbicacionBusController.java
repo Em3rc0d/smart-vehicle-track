@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import spring.smart_vehicle_track.dto.UbicacionBusDto;
 import spring.smart_vehicle_track.model.UbicacionBus;
-import spring.smart_vehicle_track.service.IUbicacionBusService;
+import spring.smart_vehicle_track.service.interfaces.IUbicacionBusService;
 
 import java.util.List;
 

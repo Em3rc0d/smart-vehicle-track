@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import spring.smart_vehicle_track.dto.BusDto;
 import spring.smart_vehicle_track.model.Bus;
-import spring.smart_vehicle_track.service.IBusService;
+import spring.smart_vehicle_track.service.interfaces.IBusService;
 
 @RestController
 @RequestMapping("/api/bus")
